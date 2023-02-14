@@ -6,7 +6,8 @@ public class OrderItem {
 	private Integer quantity;
 	private Double price;
 	
-	
+	// referencia a classe product
+	private Product product;
 	
 	
 	public OrderItem() {
@@ -14,25 +15,35 @@ public class OrderItem {
 	}
 
 
-	public OrderItem(Integer quatity, Double price) {
-
-		this.quantity = quatity;
+	public OrderItem(Integer quantity, Double price, Product product) {
+	
+		this.quantity = quantity;
 		this.price = price;
+		this.product = product;
 	}
 
 
-	public Integer getQuatity() {
+	public Integer getQuantity() {
 		return quantity;
 	}
 
 
-	public Double getPrice() {
-		return price;
+	public Product getProduct() {
+		return product;
 	}
 
 
-	public void setQuatity(Integer quatity) {
-		this.quantity = quatity;
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
+	}
+
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+
+	public Double getPrice() {
+		return price;
 	}
 
 
@@ -40,10 +51,21 @@ public class OrderItem {
 		this.price = price;
 	}
 	
+	
+	
 	public double subTotal() {
 		return price * quantity;
 		
 	}
 	
+	@Override
+	public String toString(){
+		return product.getName() + ", $" + product.getPrice() + ", Quantity: " + quantity 
+				+ ", Subtotal: $" + subTotal();
+	
+		
+		
+		
+	}
 
 }
