@@ -38,7 +38,7 @@ public class Program {
 		
 		boolean success = new File(strPath + "\\subdir").mkdir();
 		
-		System.out.println("Directory created sucessfulyly : " + success);
+		System.out.println("Directory created sucessfuly : " + success);
 		
 		
 		
