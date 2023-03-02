@@ -26,10 +26,10 @@ public class Program {
 		String carModel = sc.nextLine();
 		
 		
-		System.out.println("Retirada dd/MM/yyyy hh:mm");
+		System.out.println("Retirada (dd/MM/yyyy hh:mm): ");
 		LocalDateTime start = LocalDateTime.parse(sc.nextLine(), fmt);
 		
-		System.out.println("Retorno dd/MM/yyyy hh:mm");
+		System.out.println("Retorno (dd/MM/yyyy hh:mm): ");
 		LocalDateTime finish = LocalDateTime.parse(sc.nextLine(), fmt);
 		
 		CarRental cr = new CarRental(start, finish, new Vehicle(carModel));
