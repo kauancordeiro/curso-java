@@ -23,13 +23,4 @@ public class Vehicle {
 	public void setModel(String model) {
 		this.model = model;
 	}
-
-	
-	
-
-	
-	
-	
-	
-
 }
