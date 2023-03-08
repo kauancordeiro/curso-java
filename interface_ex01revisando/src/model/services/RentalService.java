@@ -10,7 +10,7 @@ public class RentalService {
 	private Double pricePerHour;
 	private Double pricePerDay;
 	
-	private BrazilTaxService taxService;
+	private TaxService taxService;
 
 	
 	public RentalService(Double pricePerHour, Double pricePerDay, BrazilTaxService taxService) {
@@ -21,7 +21,7 @@ public class RentalService {
 	
 	public void processInvoice(CarRental carRental) {
 		
-		double minutes = Duration.between(carRental.getStart(), carRental.getStart()).toMinutes();
+		double minutes = Duration.between(carRental.getStart(), carRental.getFinish()).toMinutes();
 		
 		double hours = minutes / 60;
 		
