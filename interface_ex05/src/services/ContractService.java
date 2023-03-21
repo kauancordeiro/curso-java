@@ -10,6 +10,8 @@ public class ContractService {
 	private OnlinePaymentService onlinePaymentService;
 	
 	
+	
+	
 
 	public ContractService(OnlinePaymentService onlinePaymentService) {
 		super();
@@ -28,19 +30,18 @@ public class ContractService {
 			double interest = onlinePaymentService.interest(basicQuota,i);
 			double fee = onlinePaymentService.paymentFee(basicQuota + interest);
 			double quota = basicQuota + interest + fee;
+			
+	
 		
 			contract.getInstallments().add(new Installment(dueDate,quota));
-	
-		}
-		
-	}
-	
-	public Double totalValue(Installment installment) {
-		
-		for (Installment c: installment) {
 			
+			contract.setTotalValue(quota);
+			
+	
 		}
-		
+	
 		
 	}
+	
 }
+

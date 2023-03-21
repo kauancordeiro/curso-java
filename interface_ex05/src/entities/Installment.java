@@ -9,6 +9,7 @@ public class Installment {
 			
 	private LocalDate date;
 	private Double amount;
+
 	
 	
 	public Installment() {
@@ -32,8 +33,7 @@ public class Installment {
 	public Double getAmount() {
 		return amount;
 	}
-
-
+	
 	public void setDate(LocalDate date) {
 		this.date = date;
 	}
@@ -42,6 +42,7 @@ public class Installment {
 	public void setAmount(Double amount) {
 		this.amount = amount;
 	}
+	
 
 
 	@Override

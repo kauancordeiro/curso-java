@@ -38,12 +38,19 @@ public class Program {
 		
 		contractService.processContract(contract, n);
 		
-		
+		double total = 0;
 		
 		System.out.println("Parcelas: ");
 		for (Installment installment : contract.getInstallments()) {
+			
 			System.out.println(installment);
+			
+			total += installment.getAmount();
 		}
+		System.out.println("Valor total a ser pago: " + total);
+		
+	
+	
 		
 		
 		sc.close();
